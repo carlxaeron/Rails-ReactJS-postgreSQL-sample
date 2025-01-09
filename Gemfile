@@ -28,3 +28,4 @@ end
 
 gem 'react-rails'
 gem 'dotenv-rails'
+gem 'bcrypt', '~> 3.1.7'
