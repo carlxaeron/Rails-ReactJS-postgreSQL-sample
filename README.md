@@ -36,3 +36,35 @@
    REACT_APP_API_URL=http://localhost:3000/api
    REACT_APP_OTHER_VARIABLE=some_value
    ```
+
+## User Authentication Setup
+
+### Rails
+
+1. Add the following gems to your `Gemfile`:
+   ```
+   gem 'bcrypt'
+   gem 'jwt'
+   gem 'rack-attack'
+   ```
+
+2. Run `bundle install` to install the gems.
+
+3. Create a new controller for handling authentication:
+   ```
+   rails generate controller Authentication
+   ```
+
+4. Implement the signup and login actions in `app/controllers/authentication_controller.rb`.
+
+5. Define routes for the signup and login endpoints in `config/routes.rb`.
+
+6. Ensure CSRF protection by including `csrf_meta_tags` in the HTML head in `app/views/layouts/application.html.erb`.
+
+### ReactJS
+
+1. Create a signup form component in `app/javascript/components/SignupForm.js`.
+
+2. Create a login form component in `app/javascript/components/LoginForm.js`.
+
+3. Import and render the `SignupForm` and `LoginForm` components in `app/javascript/components/App.js`.
