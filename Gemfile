@@ -28,3 +28,6 @@ end
 
 gem 'react-rails'
 gem 'dotenv-rails'
+gem 'bcrypt'
+gem 'jwt'
+gem 'rack-attack'
